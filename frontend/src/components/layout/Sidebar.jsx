@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { LayoutDashboard, Users, Glasses, ClipboardList, DollarSign, BarChart2, LogOut, Menu, X } from 'lucide-react';
+import { LayoutDashboard, Users, Glasses, ClipboardList, DollarSign, BarChart2, LogOut, ScanLine, X } from 'lucide-react';
 import { useState } from 'react';
 import { useAuth } from '@/context/AuthContext';
 import { cn } from '@/lib/utils';
@@ -8,6 +8,7 @@ const NAV = [
   { to: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
   { to: '/clients', icon: Users, label: 'Clientes' },
   { to: '/lenses', icon: Glasses, label: 'Lentes' },
+  { to: '/frames', icon: ScanLine, label: 'Armações' },
   { to: '/service-orders', icon: ClipboardList, label: 'Ordens de Serviço' },
   { to: '/financial', icon: DollarSign, label: 'Financeiro' },
   { to: '/reports', icon: BarChart2, label: 'Relatórios' },

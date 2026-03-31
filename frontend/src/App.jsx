@@ -5,6 +5,7 @@ import LoginPage from './pages/Login/LoginPage';
 import DashboardPage from './pages/Dashboard/DashboardPage';
 import ClientsPage from './pages/Clients/ClientsPage';
 import LensesPage from './pages/Lenses/LensesPage';
+import FramesPage from './pages/Frames/FramesPage';
 import ServiceOrdersPage from './pages/ServiceOrders/ServiceOrdersPage';
 import ServiceOrderForm from './pages/ServiceOrders/ServiceOrderForm';
 import ServiceOrderPrint from './pages/ServiceOrders/ServiceOrderPrint';
@@ -37,6 +38,7 @@ export default function App() {
             <Route path="dashboard" element={<DashboardPage />} />
             <Route path="clients" element={<ClientsPage />} />
             <Route path="lenses" element={<LensesPage />} />
+            <Route path="frames" element={<FramesPage />} />
             <Route path="service-orders" element={<ServiceOrdersPage />} />
             <Route path="service-orders/new" element={<ServiceOrderForm />} />
             <Route path="service-orders/:id/edit" element={<ServiceOrderForm />} />
