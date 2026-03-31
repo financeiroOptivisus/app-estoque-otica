@@ -315,10 +315,10 @@ export default function ServiceOrderForm() {
               </div>
               <div className="space-y-1">
                 <Label>Tipo</Label>
-                <Select value={form.frame_type} onValueChange={setVal('frame_type')}>
+                <Select value={form.frame_type || 'none'} onValueChange={(v) => setVal('frame_type')(v === 'none' ? '' : v)}>
                   <SelectTrigger><SelectValue placeholder="Selecione..." /></SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">—</SelectItem>
+                    <SelectItem value="none">—</SelectItem>
                     {FRAME_TYPES.map((t) => <SelectItem key={t} value={t}>{t}</SelectItem>)}
                   </SelectContent>
                 </Select>

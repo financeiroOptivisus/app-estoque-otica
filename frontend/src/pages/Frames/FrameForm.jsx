@@ -64,10 +64,10 @@ export default function FrameForm({ frame, onSaved }) {
       <div className="grid grid-cols-2 gap-3">
         <div className="space-y-1">
           <Label>Tipo</Label>
-          <Select value={form.type} onValueChange={setVal('type')}>
+          <Select value={form.type || 'none'} onValueChange={(v) => setVal('type')(v === 'none' ? '' : v)}>
             <SelectTrigger><SelectValue placeholder="Selecione..." /></SelectTrigger>
             <SelectContent>
-              <SelectItem value="">—</SelectItem>
+              <SelectItem value="none">—</SelectItem>
               {FRAME_TYPES.map((t) => <SelectItem key={t} value={t}>{t}</SelectItem>)}
             </SelectContent>
           </Select>

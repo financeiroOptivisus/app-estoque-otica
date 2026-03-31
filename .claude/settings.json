@@ -3,7 +3,8 @@
     "allow": [
       "Bash(npm install:*)",
       "Bash(timeout 5 node src/server.js)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(node -e \"require\\(''@radix-ui/react-dialog''\\)\")"
     ],
     "additionalDirectories": [
       "/home/fabricio/git/app-estoque/backend/src/migrations"

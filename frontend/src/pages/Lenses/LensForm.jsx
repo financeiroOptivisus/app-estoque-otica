@@ -89,10 +89,10 @@ export default function LensForm({ lens, onSaved }) {
       <div className="grid grid-cols-2 gap-3">
         <div className="space-y-1">
           <Label>Tratamento</Label>
-          <Select value={form.treatment} onValueChange={setVal('treatment')}>
+          <Select value={form.treatment || 'none'} onValueChange={(v) => setVal('treatment')(v === 'none' ? '' : v)}>
             <SelectTrigger><SelectValue placeholder="Selecione..." /></SelectTrigger>
             <SelectContent>
-              <SelectItem value="">Nenhum</SelectItem>
+              <SelectItem value="none">Nenhum</SelectItem>
               {TREATMENTS.map((t) => <SelectItem key={t} value={t}>{t}</SelectItem>)}
             </SelectContent>
           </Select>
